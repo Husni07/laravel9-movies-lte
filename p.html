@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web View sansbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Styling for desktop view */
+    body {
+      background: linear-gradient(135deg, #4527a0, #0d47a1);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0;
+      position: relative;
+    }
+    .header {
+      text-align: center;
+      padding: 20px 0;
+    }
+    h1 {
+      font-size: 36px;
+      margin: 0;
+      text-shadow: 2px 2px #000;
+    }
+    .container {
+      padding: 10px;
+    }
+    .rounded-box {
+      border-radius: 20px;
+      background-color: rgba(173, 216, 230, 0.7); /* Light Blue Background */
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+    .sansbot-name {
+      color: #f9a825;
+      font-size: 25px;
+      margin: 0;
+      z-index: 1;
+      position: relative;
+      font-family: Arial, sans-serif;
+      text-shadow: 2px 2px #000;
+    }
+    .sansbot-iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 20px;
+      background-color: #f06292;
+    }
+    .link-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #43a047;
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      margin: 10px;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #0d47a1;
+    }
+    .footer p {
+      margin: 0;
+    }
+
+    /* Media Query for Mobile View */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+      .sansbot-iframe {
+        height: 150px;
+      }
+      .sansbot-name {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="header">
+    <h1>Sansbot list uptime</h1>
+  </div>
+  
+  <div class="container">
+    <div class="rounded-box">
+      <p class="sansbot-name">IVAN UPTIME</p>
+      <iframe class="sansbot-iframe" src="https://lwlwiwj8wj2iejeiejorjranjay.icontol.repl.co"></iframe>
+    </div>
+
+    <div class="rounded-box">
+      <p class="sansbot-name">Hubungi pembuat bot:</p>
+      <a href="https://wa.me/6285809011357" class="link-button">Chat Owner</a>
+      <a href="https://wa.me/62858090113572" class="link-button">Chat Bot</a>
+    </div>
+
+    <div class="rounded-box">
+      <p class="sansbot-name">Dukung bot:</p>
+      <a href="https://saweria.co/sansbotbyivan" class="link-button">Saweria</a>
+      <p>No Dana: 085876830674 | No Shopee: 112085876830674</p>
+    </div>
+
+    <div class="rounded-box">
+      <p class="sansbot-name">Bergabung dengan grup WhatsApp bot:</p>
+      <a href="https://chat.whatsapp.com/IZhxK6hwIY85z7nvtWkN7G" class="link-button">Gabung Grup</a>
+    </div>
+
+    <div class="rounded-box">
+      <p class="sansbot-name">Pulsa:</p>
+      <p>085876830674, 085809011357</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>TERIMA KASIH BANYAK UNTUK KALIAN YANG DONASI KE BOT</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: ["#e91e63", "#9c27b0", "#3f51b5", "#03a9f4", "#009688", "#8bc34a", "#ffeb3b", "#ff5722", "#795548"]
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000"
+          },
+          polygon: {
+            nb_sides: 5
+          },
+          image: {
+            src: "img/github.svg",
+            width: 100,
+            height: 100
+          }
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 3,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse"
+          },
+          onclick: {
+            enable: true,
+            mode: "push"
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 400,
+            line_linked: {
+              opacity: 1
+            }
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3
+          },
+          repulse: {
+            distance: 100,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          },
+          remove: {
+            particles_nb: 2
+          }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
