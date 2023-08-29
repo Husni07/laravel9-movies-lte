@@ -1,5 +1,5 @@
-@extends('admin.layouts.base');
-@section('title', ' Transaction Movies');
+@extends('admin.layouts.base')
+@section('title', ' Transaction Movies')
 @section('content')
     <div class="row">
         <div class="col-md-12">

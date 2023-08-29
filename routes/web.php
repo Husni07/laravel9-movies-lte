@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\MoviesController;
 use App\Http\Controllers\Admin\TransactionController;
+use App\Http\Controllers\Admin\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,15 @@ use App\Http\Controllers\Admin\TransactionController;
 // });
 
 Route::view('/', 'p');
+
+Route::get('admin/login', [LoginController::class, 'index'])->name('admin.login');
+Route::post('admin/login', [LoginController::class, 'authenticate'])->name('admin.login.auth');
+Route::get('logout', [LoginController::class, 'logout'])->name('admin.logout');
+
+Route::group(['prefix' => 'admin', 'middleware' => ['admin.auth']], function () {
+    // Route::get('dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+});
+
 
 Route::group(['prefix' => 'admin'], function () {
 

@@ -116,11 +116,9 @@ class MoviesController extends Controller
     // {
     //     $movie = Movie::find($id);
 
-    //     // Delete the thumbnails
     //     Storage::delete('public/thumbnail/small/' . $movie->small_thumbnail);
     //     Storage::delete('public/thumbnail/large/' . $movie->large_thumbnail);
 
-    //     // Delete the movie record from database
     //     $movie->delete();
 
     //     return redirect()->route('admin.movie')->with('Success', 'Movie di delete beserta thumbnail');

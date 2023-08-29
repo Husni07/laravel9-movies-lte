@@ -1,5 +1,5 @@
-@extends('admin.layouts.base');
-@section('title', 'Movies');
+@extends('admin.layouts.base')
+@section('title', 'Movies')
 @section('content')
     <div class="row">
         <div class="col-md-12">
@@ -75,7 +75,7 @@
     </div>
 @endsection
 @section('js')
-<script>
+    <script>
         $('#movie').DataTable(); // Menginisialisasi DataTables pada tabel
-</script>
+    </script>
 @endsection
