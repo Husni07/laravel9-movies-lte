@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\MoviesController;
 use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Member\RegisterController;
+use App\Http\Controllers\Member\LoginController as MemberLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +22,14 @@ use App\Http\Controllers\Admin\LoginController;
 //     return view('p');
 // });
 
-Route::view('/', 'p');
+Route::view('/', 'index');
+
+//register member
+Route::get('/register', [RegisterController::class, 'index'])->name('member.register');
+Route::post('/register', [RegisterController::class, 'store'])->name('member.register.store');
+
+//login member
+Route::get('/login', [MemberLoginController::class, 'index'])->name('member.login');
 
 Route::get('admin/login', [LoginController::class, 'index'])->name('admin.login');
 Route::post('admin/login', [LoginController::class, 'authenticate'])->name('admin.login.auth');

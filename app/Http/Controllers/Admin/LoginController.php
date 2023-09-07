@@ -16,25 +16,26 @@ class LoginController extends Controller
     public function authenticate(Request $request)
     {
         $request->validate([
-            'email' =>'required|email',
-            'password' =>'required'
+            'email' => 'required|email',
+            'password' => 'required'
         ]);
 
-        $credentials= $request->only('email', 'password');
-        $credentials['role']='admin';
+        $credentials = $request->only('email', 'password');
+        $credentials['role'] = 'admin';
 
-        if(Auth::attempt($credentials)){
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
             return redirect()->route('admin.movie');
         }
 
         return back()->withErrors([
-            'error' =>'User not found',
+            'error' => 'User not found',
         ])->withInput();
     }
 
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
